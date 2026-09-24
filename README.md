@@ -7,6 +7,6 @@ npm --prefix web ci
 npm run dev
 ```
 
-You can also run the same commands from inside `web/`.
+You can also run the same commands from inside `web/`. The repository is configured as an npm workspace, and `vercel.json` points Vercel at the generated `web/dist` output.
 
 `shreeji_corporate_gift_website.html` is the original standalone prototype and is not the Vite entry point. Use the React app for the current catalog, routing, quote cart, and enquiry flow.

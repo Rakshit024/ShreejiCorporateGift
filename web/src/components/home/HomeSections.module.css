@@ -1,6 +1,8 @@
 .hero {
   padding: clamp(2.5rem, 6vw, 4.5rem) 0;
-  background: linear-gradient(135deg, var(--color-cream) 0%, #fff 45%, var(--color-bg) 100%);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(217, 173, 69, 0.16), transparent 30%),
+    linear-gradient(135deg, var(--color-cream) 0%, #ffffff 48%, #edf3f7 100%);
   overflow: hidden;
 }
 
@@ -48,22 +50,133 @@
   border-radius: var(--radius-xl);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  padding: 1.25rem;
+  padding: 1rem;
   box-shadow: var(--shadow-md);
+  animation: hero-float 7s ease-in-out infinite;
 }
 
-.heroProducts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+.heroStage {
+  position: relative;
+  min-height: 25rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 75% 15%, rgba(217, 173, 69, 0.2), transparent 32%),
+    linear-gradient(145deg, var(--color-cream), #ffffff 58%, #edf3f7);
 }
 
-.heroProducts img {
-  border-radius: var(--radius-md);
-  aspect-ratio: 1;
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
   object-fit: contain;
-  background: var(--color-cream);
-  padding: 0.75rem;
+}
+
+.heroImageInfo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  gap: 0.2rem;
+  padding: 3.5rem 1.25rem 1.25rem;
+  background: linear-gradient(transparent, rgba(7, 31, 67, 0.88));
+  color: #fff;
+}
+
+.heroImageInfo span,
+.heroImageInfo small {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.75rem;
+}
+
+.heroImageInfo strong {
+  font-size: 1.05rem;
+}
+
+.heroControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+}
+
+.heroControl {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-navy);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.heroControl:hover:not(:disabled) {
+  background: var(--color-navy);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.heroControl:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.heroDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.heroDot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-border);
+  cursor: pointer;
+  transition:
+    width var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.heroDot:hover,
+.heroDotActive {
+  width: 1.5rem;
+  border-radius: 999px;
+  background: var(--color-gold);
+  transform: scale(1.05);
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    box-shadow: var(--shadow-md);
+  }
+  50% {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroVisual {
+    animation: none;
+  }
 }
 
 .trust {
