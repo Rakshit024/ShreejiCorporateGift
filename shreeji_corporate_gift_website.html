@@ -309,13 +309,8 @@
         class="btn wa"
         href="https://wa.me/916354300238?text=Hello%20Shreeji%20Corporate%20Gift%2C%20I%20want%20to%20know%20about%20your%20products."
         target="_blank"
-        >WhatsApp 1</a
-      >
-      <a
-        class="btn wa"
-        href="https://wa.me/916354300238?text=Hello%20Shreeji%20Corporate%20Gift%2C%20I%20want%20to%20know%20about%20your%20products."
-        target="_blank"
-        >WhatsApp 2</a
+        rel="noopener noreferrer"
+        >WhatsApp</a
       >
     </nav>
     <section class="hero">
@@ -529,19 +524,9 @@
           <button class="btn wa" onclick="orderWhatsApp()">
             Order on WhatsApp
           </button>
-          <button
-            class="btn dark"
-            onclick="
-              alert(
-                'Cart demo ready. Connect a store/payment system before launch.',
-              )
-            "
-          >
-            Add to Cart
-          </button>
+          <a class="btn dark" href="#quote">Request Bulk Quote</a>
           <p class="note">
-            Demo prices are placeholders; replace them with your actual selling
-            rates before publishing.
+            Prices are indicative; final pricing depends on quantity, branding and delivery.
           </p>
         </div>
       </div>
@@ -606,12 +591,11 @@
         [500, Infinity, 145],
       ];
       function rate(q) {
-        return slabs.find((x) => q >= x[0] && q <= x[1])[2];
+        return slabs.find((x) => q >= x[0] && q <= x[1])?.[2] ?? slabs[0][2];
       }
       function printRate() {
-        return Number(
-          document.querySelector('input[name="print"]:checked').value,
-        );
+        const selected = document.querySelector('input[name="print"]:checked');
+        return selected ? Number(selected.value) || 0 : 0;
       }
       function update() {
         let q = Math.max(1, Number(document.getElementById("qty").value) || 1);
@@ -626,12 +610,13 @@
         update();
       }
       function orderWhatsApp(product = "Premium Steel Bottle – 750ml") {
-        let q = Number(document.getElementById("qty").value);
+        let q = Math.max(1, Math.floor(Number(document.getElementById("qty").value) || 1));
         let p = rate(q) + printRate();
         let msg = `Hello Shreeji Corporate Gift, I want ${product}. Quantity: ${q}. Price: ₹${p}/piece. Total: ₹${(q * p).toLocaleString("en-IN")}.`;
         window.open(
           "https://wa.me/916354300238?text=" + encodeURIComponent(msg),
           "_blank",
+          "noopener,noreferrer",
         );
       }
       update();

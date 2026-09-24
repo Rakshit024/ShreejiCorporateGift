@@ -1,0 +1,75 @@
+.layout {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2rem 3rem;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 260px 1fr;
+    align-items: start;
+  }
+}
+
+.sidebarDesktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .sidebarDesktop {
+    display: block;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.toolbarLeft {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  flex: 1;
+}
+
+.sort {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font: inherit;
+  background: var(--color-surface);
+  min-width: 180px;
+}
+
+.count {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.mobileSearch {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mobileSearch {
+    display: none;
+  }
+}
+
+.searchTablet {
+  display: none;
+  flex: 1;
+  max-width: 360px;
+}
+
+@media (min-width: 768px) {
+  .searchTablet {
+    display: block;
+  }
+}

@@ -1,0 +1,28 @@
+.bar {
+  background: var(--color-navy);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.8125rem;
+  min-height: var(--announcement-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.35rem 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bar span {
+  opacity: 0.95;
+}
+
+.phone {
+  color: var(--color-gold-on-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .bar {
+    font-size: 0.75rem;
+  }
+}

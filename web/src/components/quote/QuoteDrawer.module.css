@@ -1,0 +1,83 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.item h4 {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-navy);
+  grid-column: 1 / -1;
+}
+
+.meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.qtyRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.qtyRow button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.qtyRow input {
+  width: 48px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem;
+}
+
+.remove {
+  border: none;
+  background: none;
+  color: #c0392b;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  justify-self: end;
+}
+
+.footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-cream);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.35rem;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.footerActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 2rem 0;
+}

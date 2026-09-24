@@ -1,0 +1,164 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(251, 248, 241, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: var(--header-height);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 44px;
+  width: auto;
+  border-radius: var(--radius-sm);
+}
+
+.logoText {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--color-navy);
+  line-height: 1.2;
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .logoText {
+    display: block;
+  }
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 0;
+  margin-left: auto;
+}
+
+@media (min-width: 1280px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.nav a {
+  padding: 0.5rem 0.55rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--color-navy);
+  background: rgba(7, 31, 67, 0.05);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+
+@media (min-width: 1280px) {
+  .actions {
+    margin-left: 0;
+  }
+}
+
+.searchDesktop {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .searchDesktop {
+    display: block;
+    flex: 1;
+    max-width: 280px;
+  }
+}
+
+.cartBtn {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waDesktop {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .waDesktop {
+    display: inline-flex;
+  }
+}
+
+.menuBtn {
+  display: inline-flex;
+}
+
+@media (min-width: 1280px) {
+  .menuBtn {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0 1rem;
+  border-top: 1px solid var(--color-border);
+  gap: 0.25rem;
+}
+
+.mobileNav a {
+  padding: 0.75rem 0.25rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.mobileSearch {
+  padding: 0.75rem 0;
+}

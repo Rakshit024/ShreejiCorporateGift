@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#fbf8f1"/>
+  <rect x="100" y="160" width="200" height="120" rx="8" fill="#071f43"/>
+  <rect x="100" y="140" width="200" height="30" fill="#b88924"/>
+  <path d="M200 140v-35M170 105h60" stroke="#b88924" stroke-width="6"/>
+  <text x="200" y="360" text-anchor="middle" fill="#5a6478" font-family="system-ui" font-size="14">Executive Gift Set</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "name": "shreeji-corporate-gift",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Corporate gifting catalog and quotation website",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "npm --prefix web run dev --",
+    "build": "npm --prefix web run build",
+    "lint": "npm --prefix web run lint",
+    "preview": "npm --prefix web run preview --"
+  }
+}

@@ -1,0 +1,33 @@
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  background: var(--color-cream);
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.highlight {
+  background: var(--color-gold-muted);
+  font-weight: 600;
+}

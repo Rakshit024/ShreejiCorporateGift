@@ -1,0 +1,76 @@
+.cartSummary {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+}
+
+.cartSummary h2 {
+  margin: 0 0 0.75rem;
+  color: var(--color-navy);
+  font-size: 1rem;
+}
+
+.cartList {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cartList li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.875rem;
+}
+
+.cartList li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.cartList li div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.cartList strong {
+  color: var(--color-navy);
+}
+
+.cartList span {
+  color: var(--color-text-muted);
+}
+
+.cartList li > span {
+  white-space: nowrap;
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-navy);
+  font-size: 0.875rem;
+}
+
+.cartTotal strong {
+  white-space: nowrap;
+}
+
+.whatsappHint {
+  margin-top: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}

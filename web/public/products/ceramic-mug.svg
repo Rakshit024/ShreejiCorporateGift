@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#fbf8f1"/>
+  <path d="M120 140h160v120c0 33-27 60-60 60h-40c-33 0-60-27-60-60V140z" fill="#fff" stroke="#071f43" stroke-width="4"/>
+  <path d="M280 160h40c22 0 40 18 40 40v20c0 22-18 40-40 40h-40" stroke="#071f43" stroke-width="4"/>
+  <text x="200" y="360" text-anchor="middle" fill="#5a6478" font-family="system-ui" font-size="14">Ceramic Mug</text>
+</svg>

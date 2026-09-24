@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#fbf8f1"/>
+  <rect x="90" y="130" width="220" height="160" rx="12" fill="#071f43"/>
+  <path d="M150 130v-30c0-11 9-20 20-20h60c11 0 20 9 20 20v30" stroke="#b88924" stroke-width="6" fill="none"/>
+  <text x="200" y="360" text-anchor="middle" fill="#5a6478" font-family="system-ui" font-size="14">Laptop Bag</text>
+</svg>

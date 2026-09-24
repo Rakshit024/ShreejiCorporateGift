@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#fbf8f1"/>
+  <rect x="100" y="185" width="220" height="30" rx="4" fill="#071f43" transform="rotate(-25 210 200)"/>
+  <polygon points="95,178 115,200 95,222" fill="#b88924" transform="rotate(-25 105 200)"/>
+  <text x="200" y="360" text-anchor="middle" fill="#5a6478" font-family="system-ui" font-size="14">Metal Pen</text>
+</svg>

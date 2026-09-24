@@ -1,0 +1,93 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+.primary {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.primary:not(:disabled):hover {
+  background: var(--color-navy-soft);
+}
+
+.gold {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+.gold:not(:disabled):hover {
+  background: var(--color-gold-hover);
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-navy);
+}
+
+.outline:not(:disabled):hover {
+  border-color: var(--color-navy);
+  background: rgba(7, 31, 67, 0.04);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-navy);
+}
+
+.ghost:not(:disabled):hover {
+  background: rgba(7, 31, 67, 0.06);
+}
+
+.whatsapp {
+  background: var(--color-whatsapp);
+  color: var(--color-navy);
+}
+
+.whatsapp:not(:disabled):hover {
+  background: var(--color-whatsapp-dark);
+}
+
+.sm {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8125rem;
+}
+
+.lg {
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+}
+
+.full {
+  width: 100%;
+}
+
+.iconOnly {
+  padding: 0.55rem;
+  border-radius: var(--radius-sm);
+}

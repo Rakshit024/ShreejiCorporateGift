@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#fbf8f1"/>
+  <rect x="155" y="80" width="90" height="240" rx="20" fill="#071f43" opacity="0.9"/>
+  <rect x="175" y="60" width="50" height="30" rx="8" fill="#b88924"/>
+  <text x="200" y="360" text-anchor="middle" fill="#5a6478" font-family="system-ui" font-size="14">Steel Bottle 750ml</text>
+</svg>

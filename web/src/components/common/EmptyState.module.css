@@ -1,0 +1,22 @@
+.empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border);
+}
+
+.empty h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+}
+
+.empty p {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+}
+
+.icon {
+  margin: 0 auto 1rem;
+  color: var(--color-gold);
+}

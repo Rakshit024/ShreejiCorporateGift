@@ -1,0 +1,35 @@
+.search {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.6rem 0.85rem 0.6rem 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.input:focus {
+  border-color: var(--color-gold);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-gold-muted);
+}
+
+.icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.compact .input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

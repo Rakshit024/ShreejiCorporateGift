@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#fbf8f1"/>
+  <rect x="130" y="90" width="140" height="220" rx="8" fill="#071f43"/>
+  <rect x="145" y="110" width="110" height="8" rx="2" fill="#b88924" opacity="0.8"/>
+  <rect x="145" y="130" width="90" height="6" rx="2" fill="#fff" opacity="0.3"/>
+  <text x="200" y="360" text-anchor="middle" fill="#5a6478" font-family="system-ui" font-size="14">Premium Diary</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#fbf8f1"/>
+  <rect x="90" y="150" width="220" height="130" rx="10" fill="#071f43" opacity="0.9"/>
+  <path d="M200 150 L260 110 H140 Z" fill="#b88924"/>
+  <text x="200" y="330" text-anchor="middle" fill="#5a6478" font-family="system-ui" font-size="14">Corporate Hamper</text>
+</svg>
