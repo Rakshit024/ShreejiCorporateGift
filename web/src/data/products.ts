@@ -1,3 +1,8 @@
+import bottleImage from '../assets/images/bottle.webp';
+import tumblerImage from '../assets/images/tumbler.webp';
+import flaskImage from '../assets/images/flask.webp';
+import penImage from '../assets/images/pen.webp';
+import bagImage from '../assets/images/bag.webp';
 import type { Product } from '../types';
 
 const specOnEnquiry = (label: string) => ({
@@ -32,7 +37,7 @@ export const products: Product[] = [
     description:
       'High-quality stainless steel bottle, suitable for corporate gifting and logo branding.',
     shortDescription: 'Stainless steel 750ml bottle with custom branding options.',
-    image: '/products/steel-bottle-750ml.svg',
+    image: bottleImage,
     featured: true,
     customizable: true,
     bulkPricing: true,
@@ -49,6 +54,58 @@ export const products: Product[] = [
       specOnEnquiry('Lead Time'),
     ],
     tags: ['bottle', 'steel', 'drinkware', 'branding', 'bulk'],
+    available: true,
+  },
+  {
+    id: 'stainless-steel-tumbler',
+    name: 'Stainless Steel Tumbler',
+    categoryId: 'bottles-sippers',
+    category: 'Bottles & Sippers',
+    priceFrom: 175,
+    currency: 'INR',
+    description:
+      'Double-wall stainless steel tumbler designed for hot and cold corporate gifting.',
+    shortDescription: 'Insulated stainless steel tumbler for everyday use.',
+    image: tumblerImage,
+    featured: true,
+    customizable: true,
+    bulkPricing: true,
+    specifications: [
+      { label: 'Material', value: '304-grade stainless steel' },
+      specOnEnquiry('Capacity'),
+      specOnEnquiry('Color'),
+      { label: 'Branding', value: 'Custom artwork available on enquiry' },
+      specOnEnquiry('Packaging'),
+      specOnEnquiry('Minimum Order Quantity'),
+      specOnEnquiry('Lead Time'),
+    ],
+    tags: ['tumbler', 'steel', 'drinkware', 'insulated', 'branding'],
+    available: true,
+  },
+  {
+    id: 'vacuum-flask',
+    name: 'Vacuum Flask',
+    categoryId: 'bottles-sippers',
+    category: 'Bottles & Sippers',
+    priceFrom: 195,
+    currency: 'INR',
+    description:
+      'Double-wall vacuum flask for keeping drinks hot or cold during travel and gifting.',
+    shortDescription: 'Premium vacuum flask with a durable carry strap.',
+    image: flaskImage,
+    featured: true,
+    customizable: true,
+    bulkPricing: true,
+    specifications: [
+      { label: 'Material', value: '304-grade stainless steel' },
+      specOnEnquiry('Capacity'),
+      specOnEnquiry('Color'),
+      { label: 'Branding', value: 'Custom artwork available on enquiry' },
+      specOnEnquiry('Packaging'),
+      specOnEnquiry('Minimum Order Quantity'),
+      specOnEnquiry('Lead Time'),
+    ],
+    tags: ['flask', 'steel', 'drinkware', 'vacuum', 'branding'],
     available: true,
   },
   {
@@ -85,7 +142,7 @@ export const products: Product[] = [
     currency: 'INR',
     description: 'Metal pen for corporate stationery and promotional distribution.',
     shortDescription: 'Professional metal pen for everyday business use.',
-    image: '/products/metal-pen.svg',
+    image: penImage,
     featured: true,
     customizable: true,
     bulkPricing: true,
@@ -133,7 +190,7 @@ export const products: Product[] = [
     currency: 'INR',
     description: 'Laptop bag suited for corporate gifting and employee welcome kits.',
     shortDescription: 'Durable laptop bag for professionals.',
-    image: '/products/laptop-bag.svg',
+    image: bagImage,
     featured: true,
     customizable: true,
     bulkPricing: true,

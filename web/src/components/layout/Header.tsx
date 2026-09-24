@@ -1,5 +1,5 @@
 import { Menu, MessageCircle, Search, ShoppingBag, X } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.jpg';
 import { COMPANY } from '../../data/company';
@@ -65,11 +65,27 @@ export function Header({ onOpenQuote }: HeaderProps) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const submitSearch = (value: string) => {
-    const q = value.trim();
-    navigate(q ? `/products?search=${encodeURIComponent(q)}` : '/products');
-    setMobileOpen(false);
-  };
+  const submitSearch = useCallback(
+    (value: string) => {
+      const q = value.trim();
+      navigate(q ? `/products?search=${encodeURIComponent(q)}` : '/products');
+      setMobileOpen(false);
+    },
+    [navigate],
+  );
+
+  useEffect(() => {
+    // Only synchronize live header typing on the catalog. Without this guard, an
+    // empty search automatically redirected every other page (including Home)
+    // to /products after 350ms.
+    if (location.pathname !== '/products') return;
+
+    const query = search.trim();
+    if (query === currentUrlSearch.trim()) return;
+
+    const timer = window.setTimeout(() => submitSearch(search), 350);
+    return () => window.clearTimeout(timer);
+  }, [currentUrlSearch, location.pathname, search, submitSearch]);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
@@ -131,12 +147,10 @@ export function Header({ onOpenQuote }: HeaderProps) {
               compact
               value={search}
               onChange={setSearch}
+              onSubmit={submitSearch}
+              showSubmit
+              submitLabel="Go"
               id="header-search"
-              inputProps={{
-                onKeyDown: (e) => {
-                  if (e.key === 'Enter') submitSearch(search);
-                },
-              }}
             />
           </div>
 
@@ -206,16 +220,11 @@ export function Header({ onOpenQuote }: HeaderProps) {
               <ProductSearch
                 value={search}
                 onChange={setSearch}
+                onSubmit={submitSearch}
+                showSubmit
+                submitLabel="Search catalog"
                 id="mobile-header-search"
               />
-              <Button
-                variant="primary"
-                fullWidth
-                style={{ marginTop: '0.5rem' }}
-                onClick={() => submitSearch(search)}
-              >
-                Search catalog
-              </Button>
             </div>
             {navItems.map((item) => (
               <Link

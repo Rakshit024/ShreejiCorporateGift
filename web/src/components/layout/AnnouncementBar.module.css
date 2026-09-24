@@ -1,5 +1,5 @@
 .bar {
-  background: var(--color-navy);
+  background: linear-gradient(105deg, var(--color-navy), var(--color-navy-soft) 68%, var(--color-teal-dark));
   color: rgba(255, 255, 255, 0.92);
   font-size: 0.8125rem;
   min-height: var(--announcement-height);

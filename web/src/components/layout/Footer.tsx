@@ -15,6 +15,7 @@ export function Footer() {
           <div className={styles.col}>
             <h3>Quick Links</h3>
             <nav className={styles.links} aria-label="Footer">
+              <Link to="/">Home</Link>
               <Link to="/products">Products</Link>
               <Link to="/hampers">Corporate Hampers</Link>
               <Link to="/custom-branding">Custom Printing</Link>

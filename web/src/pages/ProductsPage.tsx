@@ -100,6 +100,9 @@ export function ProductsPage() {
                     id="catalog-search-tablet"
                     value={filters.search}
                     onChange={(search) => setFilters({ ...filters, search })}
+                    onSubmit={(search) => setFilters({ ...filters, search })}
+                    showSubmit
+                    submitLabel="Search"
                   />
                 </div>
               </div>
@@ -125,6 +128,9 @@ export function ProductsPage() {
                 id="catalog-search-mobile"
                 value={filters.search}
                 onChange={(search) => setFilters({ ...filters, search })}
+                onSubmit={(search) => setFilters({ ...filters, search })}
+                showSubmit
+                submitLabel="Search"
               />
             </div>
 

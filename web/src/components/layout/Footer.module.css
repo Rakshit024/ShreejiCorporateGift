@@ -1,5 +1,6 @@
 .footer {
-  background: var(--color-navy);
+  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-soft) 66%, var(--color-teal-dark));
+  border-top: 3px solid var(--color-gold);
   color: rgba(255, 255, 255, 0.88);
   padding: 3rem 0 2rem;
   margin-top: 2rem;
