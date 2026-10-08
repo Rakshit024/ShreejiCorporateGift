@@ -1,0 +1,20 @@
+.wrapper { display: flex; flex-direction: column; gap: 0.35rem; }
+.label { font-size: 0.75rem; font-weight: 600; color: var(--color-navy); text-transform: uppercase; letter-spacing: 0.03em; }
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  resize: vertical;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.textarea:focus { outline: none; border-color: var(--color-gold); box-shadow: 0 0 0 3px var(--color-gold-muted); }
+.textarea:disabled { opacity: 0.5; cursor: not-allowed; }
+.textarea.error { border-color: var(--color-danger); }
+.errorText { margin: 0; font-size: 0.75rem; color: var(--color-danger); }
+.helperText { margin: 0; font-size: 0.75rem; color: var(--color-text-muted); }

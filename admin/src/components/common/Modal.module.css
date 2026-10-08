@@ -1,0 +1,47 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(7, 31, 67, 0.4);
+}
+.dialog {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.title { margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--color-navy); }
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.close:hover { background: rgba(7, 31, 67, 0.06); color: var(--color-navy); }
+.body { padding: 1.25rem; overflow: auto; }
+.sm { width: 100%; max-width: 400px; }
+.md { width: 100%; max-width: 560px; }
+.lg { width: 100%; max-width: 800px; }
+.xl { width: 100%; max-width: 1000px; }
+.full { width: 100%; max-width: 95vw; }

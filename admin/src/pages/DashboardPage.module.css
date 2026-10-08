@@ -1,0 +1,59 @@
+.dashboardPage { padding: 1.5rem; }
+.loading { display: flex; align-items: center; justify-content: center; min-height: 300px; color: var(--color-text-muted); }
+.header { margin-bottom: 1.5rem; }
+.title { margin: 0 0 0.25rem; font-size: 1.5rem; font-weight: 800; color: var(--color-navy); }
+.subtitle { margin: 0; color: var(--color-text-muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+.cardContent { flex: 1; min-width: 0; }
+.cardLabel { margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-text-muted); }
+.cardValue { margin: 0; font-size: 1.5rem; font-weight: 800; color: var(--color-text); }
+.twoCol { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
+.panel { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-cream);
+}
+.panelTitle { margin: 0; font-size: 0.9375rem; font-weight: 700; color: var(--color-navy); }
+.chartWrap { padding: 1.25rem; min-height: 280px; }
+.chart { display: flex; align-items: flex-end; gap: 1rem; height: 240px; padding: 1rem 0; }
+.barGroup { display: flex; flex-direction: column; align-items: center; flex: 1; gap: 0.5rem; }
+.bar {
+  width: 100%;
+  max-width: 40px;
+  background: linear-gradient(180deg, var(--color-gold), var(--color-gold-hover));
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s ease;
+  min-height: 4px;
+}
+.barLabel { font-size: 0.6875rem; color: var(--color-text-muted); white-space: nowrap; }
+.empty { text-align: center; color: var(--color-text-muted); padding: 2rem; }
+.thumb { width: 36px; height: 36px; object-fit: cover; border-radius: var(--radius-sm); }

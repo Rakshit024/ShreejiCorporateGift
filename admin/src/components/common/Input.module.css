@@ -1,0 +1,22 @@
+.wrapper { display: flex; flex-direction: column; gap: 0.35rem; }
+.label { font-size: 0.75rem; font-weight: 600; color: var(--color-navy); text-transform: uppercase; letter-spacing: 0.03em; }
+.inputWrap { position: relative; display: flex; align-items: center; }
+.input {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.input:focus { outline: none; border-color: var(--color-gold); box-shadow: 0 0 0 3px var(--color-gold-muted); }
+.input:disabled { opacity: 0.5; cursor: not-allowed; }
+.input.error { border-color: var(--color-danger); }
+.input.hasRightIcon { padding-right: 2.5rem; }
+.icon { position: absolute; right: 0.7rem; color: var(--color-text-muted); }
+.icon button { pointer-events: auto; background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.errorText { margin: 0; font-size: 0.75rem; color: var(--color-danger); }
+.helperText { margin: 0; font-size: 0.75rem; color: var(--color-text-muted); }

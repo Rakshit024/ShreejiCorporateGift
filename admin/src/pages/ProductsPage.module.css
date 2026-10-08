@@ -1,0 +1,31 @@
+.page { padding: 1.5rem; }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap; }
+.header > div { flex: 1; min-width: 0; }
+.title { margin: 0; font-size: 1.5rem; font-weight: 800; color: var(--color-navy); }
+.subtitle { margin: 0; color: var(--color-text-muted); }
+.toolbar { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.searchInput { flex: 1; min-width: 260px; }
+.filterSelect { min-width: 160px; }
+.bulkBar { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: var(--color-gold-muted); border: 1px solid var(--color-border); border-radius: var(--radius-md); margin-bottom: 1rem; color: var(--color-gold-hover); font-weight: 600; font-size: 0.875rem; }
+.bulkActions { display: flex; gap: 0.5rem; }
+.thumb { width: 36px; height: 36px; object-fit: cover; border-radius: var(--radius-sm); }
+.noImage { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: var(--color-text-muted); background: var(--color-cream); border-radius: var(--radius-sm); }
+.badgeRow { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+.actions { display: flex; gap: 0.35rem; justify-content: center; }
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  border: none;
+  cursor: pointer;
+}
+.iconBtn:hover { background: rgba(7, 31, 67, 0.06); color: var(--color-navy); }
+.iconBtn:last-child:hover { background: var(--color-danger-muted); color: var(--color-danger); }
+.pagination { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.875rem; color: var(--color-text-muted); }
+.pageBtns { display: flex; gap: 0.5rem; }
+.modalActions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.5rem; }
